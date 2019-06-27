@@ -27,13 +27,13 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ea.agentloader</groupId>
-    <artifactId>ea-agent-loader-parent</artifactId>
+    <groupId>com.linkedin.agentloader</groupId>
+    <artifactId>linkedin-agent-loader-parent</artifactId>
     <version>1.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>EA Agent Loader Parent</name>
-    <description>EA Agent Loader is a collection of utilities for java agent developers.</description>
-    <url>https://github.com/electronicarts/ea-agent-loader/</url>
+    <name>Agent Loader Parent</name>
+    <description>Agent Loader is a collection of utilities for java agent developers.</description>
+    <url>https://github.com/linkedin/agent-loader</url>
 
     <properties>
         <project.target.jdk>1.8</project.target.jdk>
@@ -59,11 +59,19 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <licenses>
         <license>
             <name>The BSD 3-Clause License</name>
-            <url>http://opensource.org/licenses/BSD-3-Clause</url>
+            <url>https://spdx.org/licenses/BSD-3-Clause.html</url>
+        </license>
+        <license>
+            <name>The BSD 2-Clause License</name>
+            <url>https://spdx.org/licenses/BSD-2-Clause.html</url>
         </license>
     </licenses>
 
     <developers>
+        <developer>
+            <name>LinkedIn Inc</name>
+            <url>http://www.linkedin.com</url>
+        </developer>
         <developer>
             <name>Electronic Arts Inc</name>
             <url>http://www.ea.com</url>
@@ -71,14 +79,14 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </developers>
 	
     <organization>
-        <name>Electronic Arts Inc</name>
-        <url>http://www.ea.com</url>
+        <name>LinkedIn Inc</name>
+        <url>http://www.linkedin.com</url>
     </organization>
 
     <scm>
-        <url>https://github.com/electronicarts/ea-agent-loader</url>
-        <connection>scm:git:git://github.com/electronicarts/ea-agent-loader.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/electronicarts/ea-agent-loader.git</developerConnection>
+        <url>https://github.com/linkedin/agent-loader</url>
+        <connection>scm:git:https://github.com/linkedin/agent-loader.git</connection>
+        <developerConnection>scm:git:https://github.com/linkedin/agent-loader.git</developerConnection>
     </scm>
 
     <build>
