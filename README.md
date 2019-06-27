@@ -1,7 +1,15 @@
-EA Agent Loader
+Agent Loader
 ============
 
+#### Project Forked
+
+This is a fork of EA's [Agent Loader](https://github.com/electronicarts/ea-agent-loader) which is
+deprecated and no longer accepts contributions.
+
+We've made minor changes to it for our needs; this is not a general purpose fork.
+
 #### Project Deprecated
+
 With the introduction of JDK9, dynamically self attaching Java Agents is considered bad practice. As such we are deprecating this project and will no longer continue to maintain it.
 The project remains here for reference and for JDK8 users.
 
