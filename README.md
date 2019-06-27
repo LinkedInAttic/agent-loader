@@ -15,12 +15,18 @@ The project remains here for reference and for JDK8 users.
 
 Brief
 ============
-EA Agent Loader is a collection of utilities for [java agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/package-summary.html) developers.
+Agent Loader is a collection of utilities for [java agent](https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/package-summary.html) developers.
 It allows programmers to write and test their java agents using dynamic agent loading (without using the -javaagent jvm parameter).
 
 Developer & License
 ======
-This project was developed by [Electronic Arts](http://www.ea.com) and is licensed under the [BSD 3-Clause License](LICENSE).
+
+This project was developed by [Electronic Arts](http://www.ea.com) and
+is licensed under the [BSD 3-Clause License](EA-LICENSE).
+
+This fork includes minor changes by [LinkedIn](http://www.linkedin.com)
+and those changes are licensed under the [BSD 2-Clause
+License](LICENSE).
 
 Example
 =======
