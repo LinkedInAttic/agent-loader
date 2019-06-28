@@ -26,7 +26,7 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.ea.agentloader;
+package com.linkedin.agentloader;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -34,7 +34,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Method;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -159,7 +158,9 @@ public class AgentLoader
         try
         {
             Class.forName("com.sun.tools.attach.VirtualMachine");
-            agentLoaderClass = (Class<AgentLoaderInterface>) Class.forName("com.ea.agentloader.AgentLoaderHotSpot");
+            // Linkedin Inc changed this line to point to linkedin package
+            agentLoaderClass = (Class<AgentLoaderInterface>) Class.forName(
+                "com.linkedin.agentloader.AgentLoaderHotSpot");
         }
         catch (Exception ex)
         {
@@ -215,7 +216,7 @@ public class AgentLoader
             }
             try
             {
-                agentLoaderClass = (Class<AgentLoaderInterface>) ClassPathUtils.defineClass(systemLoader, AgentLoader.class.getResourceAsStream("/com/ea/agentloader/AgentLoaderHotSpot.class"));
+                agentLoaderClass = (Class<AgentLoaderInterface>) ClassPathUtils.defineClass(systemLoader, AgentLoader.class.getResourceAsStream("/com/linkedin/agentloader/AgentLoaderHotSpot.class"));
             }
             catch (Exception e)
             {

@@ -26,7 +26,7 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.ea.agentloader.test;/*
+package com.linkedin.agentloader.test;/*
  Copyright (C) 2015 Electronic Arts Inc.  All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
@@ -54,33 +54,41 @@ package com.ea.agentloader.test;/*
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import com.ea.agentloader.AgentLoader;
-import com.ea.agentloader.ClassPathUtils;
+import com.linkedin.agentloader.AgentLoader;
+
+import org.junit.Test;
 
 import java.lang.instrument.Instrumentation;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 
-public class HelloAgentWorld
+public class AgentFailure
 {
-    public static class HelloAgent
+    public static class FailAgent
     {
         public static void agentmain(String agentArgs, Instrumentation inst)
         {
-            System.out.println(agentArgs);
-            System.out.println("Hi from the agent!");
-            System.out.println("I've got instrumentation!: " + inst);
         }
     }
 
-    public static void main(String[] args)
+    @Test
+    public void testNotPresentInSystemClassLoader()
     {
-        // this example only works if the current classloader is the system classloader
-        if (ClassLoader.getSystemClassLoader() != HelloAgent.class.getClassLoader())
+        //assertNotEquals(ClassLoader.getSystemClassLoader(), FailAgent.class.getClassLoader());
+        if (ClassLoader.getSystemClassLoader() != FailAgent.class.getClassLoader())
         {
-            ClassPathUtils.appendToSystemPath(ClassPathUtils.getClassPathFor(HelloAgent.class));
+            try
+            {
+                AgentLoader.loadAgentClass(FailAgent.class.getName(), null, null, false, false, false);
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+            // this test must run from a special maven configuration that
+            // will cause the agent to fail.
+            fail("Should have failed");
         }
-        AgentLoader.loadAgentClass(HelloAgent.class.getName(), "Hello!");
     }
 }
