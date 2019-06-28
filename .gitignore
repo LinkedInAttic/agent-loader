@@ -5,3 +5,6 @@ target
 dependency-reduced-pom.xml
 tests.yml
 .DS_Store
+pom.xml.releaseBackup
+release.properties
+agent-loader/pom.xml.releaseBackup

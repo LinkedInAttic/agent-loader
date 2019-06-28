@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.linkedin.agentloader</groupId>
     <artifactId>linkedin-agent-loader-parent</artifactId>
@@ -22,7 +20,7 @@
         <module>agent-loader</module>
     </modules>
 
-	<dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>junit</groupId>
@@ -63,7 +61,8 @@
         <url>https://github.com/linkedin/agent-loader</url>
         <connection>scm:git:https://github.com/linkedin/agent-loader.git</connection>
         <developerConnection>scm:git:https://github.com/linkedin/agent-loader.git</developerConnection>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <build>
         <pluginManagement>
@@ -84,7 +83,7 @@
                     <artifactId>maven-gpg-plugin</artifactId>
                     <version>1.6</version>
                 </plugin>
-				<plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.18.1</version>
