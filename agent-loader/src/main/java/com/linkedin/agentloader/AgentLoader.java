@@ -43,8 +43,9 @@ import java.util.jar.Manifest;
 
 /**
  * Utilities to load java agents dynamically.
- * <p/>
+ * <p>
  * Deals with the problem of finding the proper jvm classes.
+ * </p>
  *
  * @author Daniel Sperry
  * @see java.lang.instrument.Instrumentation
@@ -79,10 +80,12 @@ public class AgentLoader
 
     /**
      * Creates loads the agent class directly. The agent class must be visible from the system class loader.
-     * <p/>
+     * <p>
      * This method creates a temporary jar with the proper manifest and loads the agent using the jvm attach facilities.
-     * <p/>
+     * </p>
+     * <p>
      * This will not work if the agent class can't be loaded by the system class loader.
+     * </p>
      * <br>
      * This can be worked around like by adding the specific class and any other dependencies to the system class loader:
      * <pre><code>
@@ -104,10 +107,13 @@ public class AgentLoader
 
     /**
      * Creates loads the agent class directly.
-     * <p/>
+     * <p>
      * This method creates a temporary jar with the proper manifest and loads the agent using the jvm attach facilities.
-     * <p/>
+     * </p>
+     *
+     * <p>
      * This will not work if the agent class can't be loaded by the system class loader.
+     * </p>
      * <br>
      * This can be worked around like by adding the specific class and any other dependencies to the system class loader:
      * <pre><code>
@@ -268,8 +274,9 @@ public class AgentLoader
 
     /**
      * Creates a jar in runtime with the proper manifest file to start the javaagent.
-     * <p/>
+     * <p>
      * This method is convenient to java agent developers since they can test their agents without creating a jar first.
+     * </p>
      *
      * @param agentClass               the agent class
      * @param bootClassPath            list of jars to be loaded with the agent, can be null
