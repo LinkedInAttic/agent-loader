@@ -29,7 +29,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.linkedin.agentloader</groupId>
     <artifactId>linkedin-agent-loader-parent</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>Agent Loader Parent</name>
     <description>Agent Loader is a collection of utilities for java agent developers.</description>
@@ -45,7 +45,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <modules>
         <module>agent-loader</module>
     </modules>
-	
+
 	<dependencyManagement>
         <dependencies>
             <dependency>
@@ -77,7 +77,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <url>http://www.ea.com</url>
         </developer>
     </developers>
-	
+
     <organization>
         <name>LinkedIn Inc</name>
         <url>http://www.linkedin.com</url>

@@ -4,3 +4,4 @@ target
 *.versionsBackup
 dependency-reduced-pom.xml
 tests.yml
+.DS_Store
