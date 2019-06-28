@@ -9,7 +9,7 @@
         <relativePath>..</relativePath>
     </parent>
     <artifactId>linkedin-agent-loader</artifactId>
-  <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Linkedin Agent Loader</name>
 
     <build>
@@ -115,4 +115,8 @@
     </dependencies>
 
 
+
+  <scm>
+    <tag>linkedin-agent-loader-parent-1.0.0-SNAPSHOT</tag>
+  </scm>
 </project>
