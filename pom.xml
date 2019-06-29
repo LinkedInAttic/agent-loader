@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.linkedin.agentloader</groupId>
     <artifactId>linkedin-agent-loader-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
     <name>Agent Loader Parent</name>
     <description>Agent Loader is a collection of utilities for java agent developers.</description>
