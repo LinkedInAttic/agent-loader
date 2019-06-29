@@ -26,7 +26,7 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.ea.agentloader;
+package com.linkedin.agentloader;
 
 import com.sun.tools.attach.VirtualMachine;
 import com.sun.tools.attach.spi.AttachProvider;
@@ -92,7 +92,8 @@ public class AgentLoaderHotSpot
         }
 
         String jvm = System.getProperty("java.vm.name").toLowerCase(Locale.ENGLISH);
-        if (jvm.contains("hotspot") || jvm.contains("openjdk") || jvm.contains("dynamic code evolution"))
+        // Linkedin Inc change the code to support zing
+        if (jvm.contains("hotspot") || jvm.contains("openjdk") || jvm.contains("dynamic code evolution") || jvm.contains("zing"))
         {
             // tools jar not present, but it's a sun vm
             Class<VirtualMachine> virtualMachineClass = pickVmImplementation();

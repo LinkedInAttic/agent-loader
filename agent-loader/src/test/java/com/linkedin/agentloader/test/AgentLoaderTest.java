@@ -26,7 +26,7 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.ea.agentloader.test;/*
+package com.linkedin.agentloader.test;/*
  Copyright (C) 2015 Electronic Arts Inc.  All rights reserved.
 
  Redistribution and use in source and binary forms, with or without
@@ -54,8 +54,8 @@ package com.ea.agentloader.test;/*
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import com.ea.agentloader.AgentLoader;
-import com.ea.agentloader.ClassPathUtils;
+import com.linkedin.agentloader.AgentLoader;
+import com.linkedin.agentloader.ClassPathUtils;
 
 import org.junit.Ignore;
 import org.junit.Test;
